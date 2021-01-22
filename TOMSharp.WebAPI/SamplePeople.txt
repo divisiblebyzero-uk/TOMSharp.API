@@ -1,0 +1,33 @@
+Person	Team	Resource type	Email address	Start Date	End Date
+Person1	Data	RT1	Email1@company.com		
+Person2	Data	RT2	Email2@company.com		
+Person3	Apps	RT3	Email3@company.com		06/01/2020
+Person4	Project	RT1	Email3@company.com		
+Person5	Data	RT2	Email3@company.com		08/11/2019
+Person6	Apps	RT3	Email3@company.com		
+Person7	Project	RT1	Email3@company.com		
+Person8	Data	RT2	Email3@company.com		
+Person9	Project	RT3	Email3@company.com		
+Person10	Apps	RT1	Email3@company.com		
+Person11	Apps	RT2	Email3@company.com		
+Person12	Project	RT3	Email3@company.com		
+Person13	Data	RT1	Email3@company.com		
+Person14	Data	RT2	Email3@company.com		03/12/2019
+Person15	Apps	RT3	Email3@company.com		
+Person16	Data	RT1	Email3@company.com		
+Person17	Apps	RT2	Email3@company.com		
+Person18	Data	RT3	Email3@company.com		
+Person19	Apps	RT1	Email3@company.com		15/10/2019
+Person20	Project	RT2	Email3@company.com	02/09/2019	
+Person21	Data	RT3	Email3@company.com		
+Person22	Project	RT1	Email3@company.com		
+Person23	Apps	RT2	Email3@company.com		
+Person24	Project	RT3	Email3@company.com		
+Person25	Apps	RT1	Email3@company.com		
+Person26	Project	RT2	Email3@company.com		
+Person27	Apps	RT3	Email3@company.com		
+Person28	Data	RT1	Email3@company.com	28/10/2019	
+Person29	Project	RT2	Email3@company.com		
+Person30	Data	RT3	Email3@company.com	02/12/2019	
+Person31	Data	RT1	Email3@company.com	06/01/2020	
+Person32	Apps	RT2	Email3@company.com	18/11/2019	

@@ -79,10 +79,11 @@ namespace TOMSharp_Loader
             services.AddAuthorization(o =>
                 {
                     o.AddPolicy(_RequireAuthenticatedUserPolicy, builder => builder.RequireAuthenticatedUser());
-                    // TODO move to a group instead of a named user
-                    o.AddPolicy(_RequireAdminPolicy, builder => builder.RequireUserName(Configuration["AdminUser"]));
+                    o.AddPolicy(_RequireAdminPolicy,
+                        builder => builder.RequireClaim(Configuration["AdministrationClaimType"], Configuration["AdministrationClaimValue"]));
                 }
             );
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

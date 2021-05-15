@@ -25,6 +25,7 @@ namespace TOMSharp_Loader.Model
         public string FinanceWIPCode { get; set; }
         public string Type { get; set; }
         public string FinanceName { get; set; }
+        public string FinanceYear { get; set; }
         public bool Capitalised { get; set; }
         public string Activity { get; set; }
     }

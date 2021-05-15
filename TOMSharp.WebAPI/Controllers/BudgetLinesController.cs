@@ -38,12 +38,12 @@ namespace TOMSharp_Loader.Controllers
             _context = context;
         }
         
-        // GET: api/BudgetLines
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<BudgetLine>>> GetBudgetLines()
+        // GET: api/BudgetLines/FinanceYear/FY22
+        [HttpGet("FinanceYear/{financeYear}")]
+        public async Task<ActionResult<IEnumerable<BudgetLine>>> GetBudgetLines(string financeYear)
         {
             _logger.LogInformation("Downloading BudgetLines");
-            return await _context.BudgetLines.OrderBy(p => p.Name).ToListAsync();
+            return await _context.BudgetLines.Where(b => b.FinanceYear == financeYear).OrderBy(p => p.Name).ToListAsync();
         }
         
         // GET: api/BudgetLines/5

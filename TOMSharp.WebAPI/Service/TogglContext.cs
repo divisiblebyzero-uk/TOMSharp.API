@@ -25,7 +25,6 @@ namespace TOMSharp_Loader.Service
         public DbSet<Person> People { get; set; }
         public DbSet<FinanceSummary> FinanceSummaries { get; set; }
         public DbSet<TimeBookingSummary> TimeBookingSummaries { get; set; }
-        public DbSet<FinanceProjectMapping> FinanceProjectMappings { get; set; }
         public DbSet<SprintSummary> SprintSummaries { get; set; }
         public DbSet<ContractorCapitalisationSummary> ContractorCapitalisationSummaries { get; set; }
         public DbSet<TimeBookingException> TimeBookingExceptions { get; set; }

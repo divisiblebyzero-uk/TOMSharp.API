@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TOMSharp_Loader.Service;
 
 namespace TOMSharp_Loader.Migrations
 {
     [DbContext(typeof(TogglContext))]
-    partial class TogglContextModelSnapshot : ModelSnapshot
+    [Migration("20210515092312_Projects gaining a finance year property")]
+    partial class Projectsgainingafinanceyearproperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -77,6 +79,30 @@ namespace TOMSharp_Loader.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ExpensePostings");
+                });
+
+            modelBuilder.Entity("TOMSharp_Loader.Model.FinanceProjectMapping", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Capitalised")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FinanceName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FinanceProjectMappings");
                 });
 
             modelBuilder.Entity("TOMSharp_Loader.Model.Forecast", b =>

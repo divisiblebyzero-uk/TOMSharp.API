@@ -52,6 +52,17 @@ namespace TOMSharp_Loader.Service
             return _togglContext.Sprints.First(s=>s.StartDate < now && s.EndDate > now);
         }
 
+        private string GetCurrentFinanceYear()
+        {
+            var now = DateTime.Now;
+            var yearStub = now.Year % 2000;
+            if (now.Month >= 4)
+            {
+                yearStub++;
+            }
+            return $"FY{yearStub}";
+        }
+
         public int DownloadTimeEntries()
         {
             return DownloadTimeEntries(GetLatestSprint());
@@ -93,7 +104,8 @@ namespace TOMSharp_Loader.Service
                     Name = timeEntry.Project,
                     TimeEntryName = timeEntry.Project,
                     BudgetLine = defaultBudgetLine,
-                    Activity = _projectActivityDeterminer.DetermineProjectActivity(timeEntry.Project)
+                    Activity = _projectActivityDeterminer.DetermineProjectActivity(timeEntry.Project),
+                    FinanceYear = GetCurrentFinanceYear()
                 };
                 _togglContext.Projects.Add(project);
             }

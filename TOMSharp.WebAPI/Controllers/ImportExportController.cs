@@ -167,6 +167,7 @@ namespace TOMSharp_Loader.Controllers
         
         [HttpPost]
         [DisableRequestSizeLimit]
+        [Authorize(Policy = "RequireAdminPolicy")]
         public async Task<IActionResult> Import()
         {
             var files = Request.Form.Files;
